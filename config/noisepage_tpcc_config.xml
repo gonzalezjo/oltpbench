@@ -4,18 +4,18 @@
     <!-- Connection details -->
     <dbtype>noisepage</dbtype>
     <driver>org.postgresql.Driver</driver>
-    <DBUrl>jdbc:postgresql://localhost:15721/terrier</DBUrl>
-    <!-- <DBUrl>jdbc:postgresql://localhost:15721/terrier?preferQueryMode=simple</DBUrl> -->
+	<!--<DBUrl>jdbc:postgresql://localhost:15721/terrier</DBUrl>-->
+	<DBUrl>jdbc:postgresql:terrier?socketFactory=org.newsclub.net.unix.socketfactory.PostgresqlAFUNIXSocketFactory&amp;socketFactoryArg=/tmp/.s.PGSQL.15721</DBUrl>
     <username>test</username>
     <password>test</password>
     <isolation>TRANSACTION_READ_COMMITTED</isolation>
     
     <!-- Scale factor is the number of warehouses in TPCC -->
-    <scalefactor>1</scalefactor>
-    <!-- <loaderThreads>1</loaderThreads> -->
+    <scalefactor>10</scalefactor>
+	<loaderThreads>10</loaderThreads>
     
     <!-- The workload -->
-    <terminals>1</terminals>
+    <terminals>10</terminals>
     <works>
         <work>
           <time>60</time>
